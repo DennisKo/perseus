@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "apollo-zeit",
+  "public": true,
+  "builds": [
+    { "src": "www/package.json", "use": "@now/next" },
+    { "src": "api/index.ts", "use": "@now/node@canary" }
+  ],
+  "routes": [
+    { "src": "/api", "dest": "api/index.ts" },
+    { "src": "/(.*)", "dest": "www/$1" }
+  ]
+}
