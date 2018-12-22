@@ -1,6 +1,7 @@
 {
   "name": "www",
   "version": "1.0.0",
+  "main": "pages/index.tsx",
   "scripts": {
     "dev": "next",
     "build": "next build",
