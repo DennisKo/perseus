@@ -8,6 +8,6 @@
   ],
   "routes": [
     { "src": "/api", "dest": "api/index.ts" },
-    { "src": "/(.*)", "dest": "www/$1" }
+    { "src": "/(.*)", "dest": "www/next.config.js" }
   ]
 }
