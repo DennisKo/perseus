@@ -13,8 +13,12 @@ function create(initialState) {
   return new ApolloClient({
     connectToDevTools: process.browser,
     ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
+
     link: new HttpLink({
-      uri: "/api", // Server URL (must be absolute)
+      uri:
+        process.env.NODE_ENV === "production"
+          ? "/api"
+          : "http://localhost:4000/api", // Server URL (must be absolute)
       credentials: "same-origin" // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache().restore(initialState || {})

@@ -7,6 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
     "apollo-boost": "^0.1.23",
     "graphql": "^14.0.2",
     "isomorphic-unfetch": "3.0.0",
@@ -14,5 +15,11 @@
     "react": "^16.7.0",
     "react-apollo": "^2.3.3",
     "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/next": "^7.0.5",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11"
   }
 }
