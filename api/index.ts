@@ -42,8 +42,6 @@ server.applyMiddleware({ app, path: "/api" });
 
 const port = process.env.PORT || 4000;
 
-console.log(process.env);
-
 app.listen({ port }, () =>
   console.log(`🚀 Server ready at ${server.graphqlPath}`)
 );
