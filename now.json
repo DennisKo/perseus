@@ -6,8 +6,5 @@
     { "src": "www/next.config.js", "use": "@now/next" },
     { "src": "api/index.ts", "use": "@now/node@canary" }
   ],
-  "routes": [
-    { "src": "/api", "dest": "api/index.ts" },
-    { "src": "/(.*)", "dest": "www/$1" }
-  ]
+  "routes": [{ "src": "/api", "dest": "api/index.ts" }]
 }
