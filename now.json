@@ -3,7 +3,7 @@
   "name": "apollo-zeit",
   "regions": ["bru"],
   "builds": [
-    { "src": "www/next.config.js", "use": "@now/next" },
+    { "src": "www/next.config.js", "use": "@now/next@canary" },
     { "src": "api/index.ts", "use": "@now/node@canary" }
   ],
   "routes": [
