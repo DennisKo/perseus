@@ -8,6 +8,7 @@
     "gen": "apollo service:download && apollo client:codegen --target typescript --localSchemaFile=schema.json --outputFlat"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.5",
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
     "@zeit/next-typescript": "^1.1.1",
