@@ -24,7 +24,7 @@ export default class BookList extends React.Component<{}, {}> {
             <section>
               <ul>
                 {books.map((book, index) => (
-                  <div
+                  <li
                     css={{
                       color: "hotpink",
                       "&:hover": {
@@ -36,7 +36,7 @@ export default class BookList extends React.Component<{}, {}> {
                     <span>{index + 1}. </span>
                     <div>{book.title}</div>
                     <div>{book.author}</div>
-                  </div>
+                  </li>
                 ))}
               </ul>
             </section>
