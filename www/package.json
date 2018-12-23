@@ -8,6 +8,8 @@
     "gen": "apollo service:download && apollo client:codegen --target typescript --localSchemaFile=schema.json --outputFlat"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
     "@zeit/next-typescript": "^1.1.1",
     "apollo-boost": "^0.1.23",
     "graphql": "^14.0.2",

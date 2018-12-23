@@ -2,6 +2,11 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import * as React from "react";
 import { BooksQuery } from "../__generated__/BooksQuery";
+import styled from '@emotion/styled'
+
+const ListItem = styled.li`
+  color: hotpink;
+`
 
 const booksQuery = gql`
   query BooksQuery {
@@ -24,11 +29,11 @@ export default class BookList extends React.Component<{}, {}> {
             <section>
               <ul>
                 {books.map((book, index) => (
-                  <li key={book.title}>
+                  <ListItem key={book.title}>
                     <span>{index + 1}. </span>
                     <div>{book.title}</div>
                     <div>{book.author}</div>
-                  </li>
+                  </ListItem>
                 ))}
               </ul>
             </section>
