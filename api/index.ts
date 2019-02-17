@@ -1,5 +1,7 @@
 import { ApolloServer, gql } from "apollo-server-express";
 import express from "express";
+import { importSchema } from 'graphql-import'
+import { makeExecutableSchema } from 'graphql-tools'
 
 const books = [
   {
@@ -12,16 +14,7 @@ const books = [
   }
 ];
 
-const typeDefs = gql`
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-`;
+const typeDefs = importSchema(`${__dirname}/schema.graphql`)
 
 const resolvers = {
   Query: {
@@ -29,18 +22,22 @@ const resolvers = {
   }
 };
 
+const schema = makeExecutableSchema({ typeDefs, resolvers })
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
   introspection: true,
   playground: { endpoint: "/api" }
 });
 
 const app = express();
 
-server.applyMiddleware({ app, path: "/api" });
+server.applyMiddleware({
+  app,
+  path: "/api"
+});
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8000;
 
 app.listen({ port }, () =>
   console.log(`🚀 Server ready at ${server.graphqlPath}`)
