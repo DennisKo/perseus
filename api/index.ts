@@ -32,12 +32,9 @@ const server = new ApolloServer({
 
 const app = express();
 
-server.applyMiddleware({
-  app,
-  path: "/api"
-});
+server.applyMiddleware({ app, path: "/api" });
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 4000;
 
 app.listen({ port }, () =>
   console.log(`🚀 Server ready at ${server.graphqlPath}`)
