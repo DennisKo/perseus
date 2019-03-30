@@ -9,19 +9,19 @@
   },
   "dependencies": {
     "@zeit/next-typescript": "^1.1.1",
-    "apollo-boost": "^0.1.23",
+    "apollo-boost": "^0.3.1",
     "graphql": "^14.0.2",
     "isomorphic-unfetch": "3.0.0",
-    "next": "^7.0.2",
-    "react": "^16.7.0",
-    "react-apollo": "^2.3.3",
-    "react-dom": "^16.7.0"
+    "next": "^8.0.3",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.3",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@types/graphql": "^14.0.3",
-    "@types/next": "^7.0.5",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "apollo": "^2.1.8"
+    "@types/graphql": "^14.2.0",
+    "@types/next": "^8.0.3",
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
+    "apollo": "^2.6.2"
   }
 }
