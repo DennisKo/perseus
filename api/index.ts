@@ -1,4 +1,6 @@
-import { ApolloServer, gql } from "apollo-server";
+import { importSchema } from 'graphql-import'
+import { makeExecutableSchema } from 'graphql-tools'
+import { ApolloServer } from "apollo-server";
 
 const books = [
   {
@@ -11,16 +13,7 @@ const books = [
   }
 ];
 
-const typeDefs = gql`
-  type Book {
-    title: String!
-    author: String!
-  }
-
-  type Query {
-    books: [Book]!
-  }
-`;
+const typeDefs = importSchema(`${__dirname}/schema.graphql`)
 
 const resolvers = {
   Query: {
@@ -28,9 +21,10 @@ const resolvers = {
   }
 };
 
+const schema = makeExecutableSchema({ typeDefs, resolvers })
+
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
   introspection: true,
   playground: { endpoint: "/api" }
 });
