@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "strict": true,
+    "target": "esnext",
     "module": "esnext",
-    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "lib": ["dom", "es2017"],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
     "importHelpers": true,
-    "strictNullChecks": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "noEmit": true
   }
 }
