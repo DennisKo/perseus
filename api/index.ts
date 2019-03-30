@@ -1,5 +1,4 @@
-import { ApolloServer, gql } from "apollo-server-express";
-import express from "express";
+import { ApolloServer, gql } from "apollo-server";
 
 const books = [
   {
@@ -36,14 +35,6 @@ const server = new ApolloServer({
   playground: { endpoint: "/api" }
 });
 
-const app = express();
-
-server.applyMiddleware({ app, path: "/api" });
-
-const port = process.env.PORT || 4000;
-
-app.listen({ port }, () =>
-  console.log(`🚀 Server ready at ${server.graphqlPath}`)
-);
-
-export default app;
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
+});
