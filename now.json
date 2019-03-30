@@ -4,7 +4,7 @@
   "regions": ["bru"],
   "builds": [
     { "src": "www/package.json", "use": "@now/next" },
-    { "src": "api/index.ts", "use": "@now/node-server@canary" }
+    { "src": "api/index.ts", "use": "@now/node-server" }
   ],
   "routes": [
     { "src": "/api", "dest": "api/index.ts" },
