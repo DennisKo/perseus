@@ -11,9 +11,7 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "noUnusedLocals": true,
-    "preserveConstEnums": true,
-    "removeComments": false,
-    "skipLibCheck": true,
-    "noEmit": true
-  }
+    "preserveConstEnums": true
+  },
+  "exclude": ["node_modules", ".next"]
 }

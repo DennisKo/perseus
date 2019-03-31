@@ -6,7 +6,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit && lint-staged"
+      "pre-commit": "tsc -p api/tsconfig.json --noEmit && tsc -p www/tsconfig.json --noEmit  && lint-staged"
     }
   },
   "lint-staged": {
