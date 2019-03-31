@@ -12,7 +12,7 @@ const booksQuery = gql`
   }
 `;
 
-const BookList = () => (
+const BookList = ( ) => (
   <Query<BooksQuery> query={booksQuery}>
     {({ loading, error, data }) => {
       if (error) return <div>{JSON.stringify(error)}</div>;
