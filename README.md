@@ -1,6 +1,6 @@
 Perseus tries to supply a good starting point to build a Monorepo FullStack React/GraphQL App which can be deployed by a single command `now`.
 
-The proejct combines:
+The project combines:
 
 - [Next.js](https://github.com/zeit/next.js/)
 - [React Apollo](https://github.com/apollographql/react-apollo)
