@@ -4,7 +4,8 @@
     "target": "es2017",
     "outDir": "dist",
     "lib": ["esnext"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noEmit": true
   },
   "exclude": ["node_modules"]
 }

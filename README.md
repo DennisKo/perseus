@@ -6,11 +6,12 @@ This example combines:
 - [Apollo Codegen](https://github.com/apollographql/apollo-tooling)
 - [Next.js](https://github.com/zeit/next.js/)
 - [Now 2.0](https://github.com/zeit/now-cli)
-- [Typescript](https://github.com/Microsoft/TypeScript) 
+- [Typescript](https://github.com/Microsoft/TypeScript)
 
 to build a Monorepo FullStack GraphQL App which can be deployed by a single command `now`.
 
 ---
+
 **Install**
 
 `yarn`
@@ -29,4 +30,6 @@ With api running
 
 **Deploy**
 
-`now`
+- One Time: Follow instructions on how to setup Now v2.0 https://zeit.co/docs/v2/getting-started/installation
+
+- `now` in project root
