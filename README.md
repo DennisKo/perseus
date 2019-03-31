@@ -36,8 +36,12 @@ After you made changes to your GraphQL schema:
 
 **Deploy**
 
-- One Time: Follow instructions on how to setup Now v2.0 https://zeit.co/docs/v2/getting-started/installation
+One Time:
 
+- Follow instructions on how to setup Now v2.0 https://zeit.co/docs/v2/getting-started/installation
+- edit `./now.json` to your needs. set regions and name fields.
+
+Deploy:
 - `now` in project root
 
 ## WTF is Perseus?
