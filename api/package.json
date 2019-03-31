@@ -1,10 +1,10 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -e ts,graphql --ignore tmp/**/* --exec ts-node index.ts"
+    "dev": "nodemon -e ts,graphql --ignore tmp/**/* --exec ts-node src/index.ts"
   },
   "dependencies": {
     "apollo-server": "^2.4.8",
