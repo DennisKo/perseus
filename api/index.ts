@@ -1,5 +1,5 @@
-import { importSchema } from 'graphql-import'
-import { makeExecutableSchema } from 'graphql-tools'
+import { importSchema } from "graphql-import";
+import { makeExecutableSchema } from "graphql-tools";
 import { ApolloServer } from "apollo-server";
 
 const books = [
@@ -13,7 +13,7 @@ const books = [
   }
 ];
 
-const typeDefs = importSchema(`${__dirname}/schema.graphql`)
+const typeDefs = importSchema(`${__dirname}/schema.graphql`);
 
 const resolvers = {
   Query: {
@@ -21,7 +21,7 @@ const resolvers = {
   }
 };
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 const server = new ApolloServer({
   schema,
