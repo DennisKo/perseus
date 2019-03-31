@@ -12,12 +12,12 @@
   "lint-staged": {
     "api/src/**/*.{ts}": [
       "prettier --write",
-      "eslint . --fix",
+      "eslint --fix",
       "git add"
     ],
-    "www/pages/**/*.{js, tsx}": [
+    "www/pages/**/*.{js,tsx}": [
       "prettier --write",
-      "eslint . --fix",
+      "eslint --fix",
       "git add"
     ]
   },
