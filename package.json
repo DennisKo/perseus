@@ -1,6 +1,6 @@
 {
   "name": "perseus-now",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "ISC",
   "bin": "./cli.js",
   "repository": "DennisKo/perseus",
