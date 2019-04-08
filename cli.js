@@ -2,9 +2,10 @@
 
 const fs = require("fs-extra");
 const { version } = require("./package.json");
-const { execSync } = require("child_process");
 
 const dir = process.argv[2];
+
+execSync(`yarn`);
 
 console.log(`Creating application in ./${dir} ...`);
 
