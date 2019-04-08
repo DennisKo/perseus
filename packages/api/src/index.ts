@@ -9,7 +9,7 @@ const books = [
   },
   {
     title: "Jurassic Park",
-    author: "Michael Crichton"
+    author: "Michael fds"
   }
 ];
 
