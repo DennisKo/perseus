@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs-extra");
+const path = require("path");
 const { version } = require("./package.json");
 
-const dir = process.argv[2];
+const rootDir = path.join(__dirname, ".");
+const packagesDir = path.join(rootDir, "packages");
+const currentDir = process.cwd();
+const targetDir = `${currentDir}/${process.argv[2]}`;
 
 execSync(`yarn`);
 
-console.log(`Creating application in ./${dir} ...`);
+console.log(`Creating application in ${targetDir} ...`);
 
-fs.copySync("./packages", `./${dir}`, {
+fs.copySync(packagesDir, targetDir, {
   overwrite: false,
   errorOnExist: true
 });
@@ -17,10 +21,10 @@ fs.copySync("./packages", `./${dir}`, {
 console.log(`Installing dependencies...`);
 
 execSync(`yarn`, {
-  cwd: dir,
+  cwd: targetDir,
   stdio: "inherit"
 });
 
 console.log(
-  `All done! Use "cd ${dir} && yarn dev" to start the development environment`
+  `All done! Use "cd ${targetDir} && yarn dev" to start the development environment`
 );

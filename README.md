@@ -16,17 +16,13 @@ The project combines:
 
 **Install**
 
-- clone this repo
-
-- `yarn` in project root
+- `npx perseus-now myapp`
 
 **Develop**
 
 Run these 2 in parallel:
 
-`cd api && yarn dev`
-
-`cd www && yarn dev`
+`cd myapp && yarn dev`
 
 **Generate Types (Client)**
 
@@ -42,6 +38,7 @@ One Time:
 - edit `./now.json` to your needs. set regions and name fields.
 
 Deploy:
+
 - `now` in project root
 
 ## WTF is Perseus?
