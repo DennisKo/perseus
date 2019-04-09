@@ -20,8 +20,6 @@ The project combines:
 
 **Develop**
 
-Run these 2 in parallel:
-
 `cd myapp && yarn dev`
 
 **Generate Types (Client)**
