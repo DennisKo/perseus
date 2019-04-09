@@ -1,4 +1,4 @@
-# Perseus - A React + GraphQL boilerplate
+# Perseus - A React + GraphQL monorepo boilerplate
 
 Perseus tries to supply a good starting point to build a Monorepo FullStack React/GraphQL App which can be deployed by a single command `now`.
 
