@@ -27,7 +27,7 @@ const schema = makeExecutableSchema({ typeDefs, resolvers });
 const server = new ApolloServer({
   schema,
   introspection: true,
-  playground: { endpoint: "/graphiql" }
+  playground: { endpoint: "/api" }
 });
 
 const app = express();
